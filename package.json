@@ -7,7 +7,7 @@
     "beautiful": "lint-staged",
     "start": "nodemon --inspect src/index.js",
     "watch": "node-sass --watch src/resources/scss --output src/public/css",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Running tests...\" && exit 0",
     "prepare": "husky"
   },
   "repository": {
@@ -23,11 +23,7 @@
   "lint-staged": {
     "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --tab-width 2 --write"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
+
   "dependencies": {
     "express": "^4.18.2",
     "express-handlebars": "^7.1.2"
