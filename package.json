@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/HaiNamm/nodejs-bk#readme",
   "lint-staged": {
-    "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --write"
+    "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --tab-width 3 --write"
   },
   "husky": {
     "hooks": {
