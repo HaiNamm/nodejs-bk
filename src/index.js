@@ -40,11 +40,11 @@ app.engine(
             res.render('search');
         });
 
-app.post('/search', (req, res) => {
-    console.log(req.body);
-    res.send('');
-});
-
-  app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`);
+  app.post('/search', (req, res) => {
+      console.log(req.body);
+      res.send('');
   });
+
+    app.listen(port, () => {
+      console.log(`Example app listening on port ${port}`);
+    });

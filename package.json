@@ -7,8 +7,7 @@
     "beautiful": "lint-staged",
     "start": "nodemon --inspect src/index.js",
     "watch": "node-sass --watch src/resources/scss --output src/public/css",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -20,16 +19,14 @@
     "url": "https://github.com/HaiNamm/nodejs-bk/issues"
   },
   "homepage": "https://github.com/HaiNamm/nodejs-bk#readme",
+  "lint-staged": {
+    "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --tab-width 4 --write"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }
   },
-  
-  "lint-staged": {
-    "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --tab-width 4 --write"
-  },
-
   "dependencies": {
     "express": "^4.18.2",
     "express-handlebars": "^7.1.2"
