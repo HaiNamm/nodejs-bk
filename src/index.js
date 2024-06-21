@@ -3,8 +3,8 @@ const express = require('express');
 const morgan = require('morgan');
 const { engine } = require('express-handlebars');
 
-const app = express();
-const port = 3000;
+    const app = express();
+      const port = 3000;
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(
