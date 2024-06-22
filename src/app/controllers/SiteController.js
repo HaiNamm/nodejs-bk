@@ -1,15 +1,14 @@
-const Course = require('../Modules/Course');
+const Course = require('../modules/Course');
 
 class SiteController {
   //GET /
-  index(req, res) {
-    Course.find({}, function (err, courses) {
-      if (!err) {
-        res.json(courses);
-      } else {
-        res.status(400).json({ error: 'ERROR!!!' });
-      }
-    });
+  async index(req, res) {
+    try {
+      const courses = await Course.find({});
+      res.json(courses);
+    } catch (error) {
+      res.status(400).json({ error: 'ERROR!!!' });
+    }
   }
 
   //GET /search
