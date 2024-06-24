@@ -5,11 +5,11 @@ class SiteController {
   //GET /
   index(req, res, next) {
     Course.find({})
-      .then((courses) => {
+      .then((courses) =>
         res.render('home', {
           courses: mutipleMongooseToOject(courses),
-        });
-      })
+        }),
+      )
       .catch(next);
   }
 
